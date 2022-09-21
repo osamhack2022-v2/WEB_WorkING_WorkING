@@ -25,6 +25,7 @@
 ### Front-end
  -  vue.js 이용하여 front-end 프레임워크 구현
  -  UI framework
+ -  [Tailwind CSS](https://tailwindcss.com)
 
 ## 설치 안내 (Installation Process)
 ```bash
