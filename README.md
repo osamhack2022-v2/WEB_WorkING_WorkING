@@ -12,7 +12,8 @@
   - 운동 커뮤니티 구성
   
 ## CI/CD 상태 (CI/CD Status)
-To be declared
+[![Frontend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml) 
+[![Backend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml)
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
