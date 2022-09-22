@@ -1,9 +1,10 @@
 <template lang="pug">
-Tutorial
+p.text-xl Test
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  layout: 'DefaultLayout'
 }
 </script>

@@ -1,0 +1,38 @@
+<template lang="pug">
+div
+  header.p-4.max-w-6xl.m-auto
+    nav.flex.justify-between.items-center
+      nuxt-link(to="/")
+        p.text-2xl {{ getProductName() }}
+      ul.flex.justify-end.gap-6
+        li
+          nuxt-link(to="/page1") 1
+        li
+          nuxt-link(to="/page2") 2
+
+  nuxt
+
+  footer.p-4.max-w-6xl.m-auto.mt-6.mb-6
+    div.items-center(class="lg:flex lg:justify-between")
+      div
+        p.font-light &copy; {{ getProductName() }}
+        p.text-xs.mt-1.text-gray-500
+        span.font-bold.mr-1 Build:
+          | {{ commit }}
+
+        div.text-sm.mt-2(class="md:mt-0")
+          nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
+          a.text-blue-500(href="https://github.com/osamhack2022/WEB_WorkING_WorkING") GitHub
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      commit: process.env.NUXT_ENV_CURRENT_GIT_SHA || 'dev'
+    }
+  },
+  mounted () {},
+  methods: {}
+}
+</script>
