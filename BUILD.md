@@ -19,7 +19,11 @@
 1. cd into `backend`.
 2. Run `yarn` to download dependencies.
 3. Run `yarn build` to build Typescript code into Javascript.
-  > **Note**  
-  > For faster deployment, backend build utilizes [SWC](https://github.com/swc-project/swc), A Super-fast TS/JS compiler for the web.  
-  > If the compilation fails, you can always build with fallback to stock Typescript builder via running command `yarn build:types`  
+   > **Note**  
+   > For faster deployment, backend build utilizes [SWC](https://github.com/swc-project/swc), A Super-fast TS/JS compiler for the web.  
+   > If the compilation fails, you can always build with fallback to stock Typescript builder via running command `yarn build:types`  
 4. Run `yarn start` to start your local fastify server.
+
+## Setting up Accounts Backend
+1. Clone [upstream meiliNG repository](https://github.com/meili-NG/meiliNG)
+2. Follow directions on [INSTALL.md](https://github.com/meili-NG/meiliNG/blob/main/INSTALL.md)  
