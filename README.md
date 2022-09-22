@@ -1,6 +1,9 @@
 
+[![Frontend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml) 
+[![Backend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml)
+
 # Work ~ING
-군 장병 헬스장 및 운동 관리 시스템
+군 장병 헬스장 및 운동 관리 시스템  
 
 ## 프로젝트 소개
 일상에서 가장 중요히 여겨야할 것중 하나는 바로 건강입니다. 건강을 챙기려면 건강한 식단을 가지는 것도 중요하지만, 운동 역시 빼놓을 수 없습니다. 이 프로젝트에서는 국군 장병들이 일상속에서 운동에 조금이라도 자극 받으며 도움을 줄 수 있는 서비스를 구현해볼 것입니다. 
@@ -10,10 +13,6 @@
   - 체력검정 및 영내 체련활동 대회/검열 준비
   - 운동량 목표 설정 푸쉬 알림 (WebNotification API, ServiceWorker)
   - 운동 커뮤니티 구성
-  
-## CI/CD 상태 (CI/CD Status)
-[![Frontend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml) 
-[![Backend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml)
 
 ## 기술 스택 (Technique Used) 
 ### Server(back-end)
