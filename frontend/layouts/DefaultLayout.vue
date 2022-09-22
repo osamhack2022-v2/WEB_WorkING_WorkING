@@ -18,7 +18,7 @@ div
         p.font-light &copy; {{ getProductName() }}
         p.text-xs.mt-1.text-gray-500
         span.font-bold.mr-1 Build:
-          | {{ commit }}
+        | {{ commit }}
 
         div.text-sm.mt-2(class="md:mt-0")
           nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
