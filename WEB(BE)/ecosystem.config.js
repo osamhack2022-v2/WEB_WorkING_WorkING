@@ -61,7 +61,7 @@ module.exports = {
       } ./.env ${process.env.DEPLOY_USER}@${
         process.env.DEPLOY_HOST
       }:${installPath}/current`,
-      "post-deploy": `cd WEB(BE) && yarn && yarn generate && yarn build && pm2 startOrRestart ecosystem.config.js`,
+      "post-deploy": `cd "WEB(BE)" && yarn && yarn generate && yarn build && pm2 startOrRestart ecosystem.config.js`,
       ssh_options: sshOptions,
     },
   },
