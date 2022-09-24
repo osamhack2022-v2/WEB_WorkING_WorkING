@@ -18,6 +18,7 @@ module.exports = {
     {
       name: 'working-fe',
       exec_mode: 'cluster',
+      cwd: './WEB(FE)/',
       instances: 1,
       script: './node_modules/nuxt/bin/nuxt.js',
       args: 'start',
@@ -44,7 +45,7 @@ module.exports = {
       path: installPath,
       key: keyFile,
       // 'pre-deploy-local': `scp -Cr ./.env ${process.env.DEPLOY_USER}@${process.env.DEPLOY_HOST}:${installPath}/current`,
-      'post-deploy': 'cd frontend && yarn && yarn build && pm2 startOrRestart ecosystem.config.js',
+      'post-deploy': 'cd WEB(FE) && yarn && yarn build && pm2 startOrRestart ecosystem.config.js',
       ssh_options: [
         process.env.DEPLOY_BYPASS_KEY_CHECK ? 'StrictHostKeyChecking=no' : undefined,
         process.env.DEPLOY_SUPPRESS_SSH_LOG ? 'LogLevel=QUIET' : undefined

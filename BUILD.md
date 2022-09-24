@@ -10,13 +10,13 @@
 > Due to Nuxt2's dependency issue, Node 16.x is preferred instead of 18.x.  
 
 ## Building Frontend
-1. cd into `frontend`.
+1. cd into `WEB(FE)`.
 2. Run `yarn` to download dependencies.
 3. Run `yarn build` to build initial frontend.
 4. Run `yarn start` to start Nuxt server on your localhost.
 
 ## Building Backend
-1. cd into `backend`.
+1. cd into `WEB(BE)`.
 2. Run `yarn` to download dependencies.
 3. Run `yarn build` to build Typescript code into Javascript.
    > **Note**  

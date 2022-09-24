@@ -21,7 +21,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./backend
+        working-directory: ./WEB(BE)
 
     steps:
       - name: Checkout 🛎

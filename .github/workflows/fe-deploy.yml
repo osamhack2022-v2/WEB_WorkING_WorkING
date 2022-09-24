@@ -17,7 +17,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./frontend
+        working-directory: ./WEB(FE)
 
     steps:
       - name: Checkout 🛎
