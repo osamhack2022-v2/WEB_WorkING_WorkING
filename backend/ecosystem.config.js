@@ -52,7 +52,11 @@ module.exports = {
       key: keyFile,
       "pre-deploy-local": `scp -Cr${
         sshOptions.length > 0
-          ? " " + sshOptions.map((n) => '-o "' + n + '"').join(" ")
+          ? " " +
+            sshOptions
+              .filter((n) => n && n.trim() !== "")
+              .map((n) => "-o " + n + "")
+              .join(" ")
           : ""
       } ./.env ${process.env.DEPLOY_USER}@${
         process.env.DEPLOY_HOST
