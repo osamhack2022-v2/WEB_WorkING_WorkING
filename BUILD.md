@@ -13,16 +13,21 @@
 1. cd into `WEB(FE)`.
 2. Run `yarn` to download dependencies.
 3. Run `yarn build` to build initial frontend.
-4. Run `yarn start` to start Nuxt server on your localhost.
+4. Run `yarn start` to start Nuxt server on your localhost.  
+   Alternatively, You can use `pm2 start ecosystem.config.js`  
 
 ## Building Backend
 1. cd into `WEB(BE)`.
 2. Run `yarn` to download dependencies.
-3. Run `yarn build` to build Typescript code into Javascript.
+3. Edit `.env` to match your local setup. Please refer to `.env.example` for more information on each environment variables.
+4. Run `yarn prisma db push` to synchronize `prisma.schema` file with your mySQL (or compatible) database
+5. Run `yarn generate` to generate Typescript typings.
+6. Run `yarn build` to build Typescript code into Javascript.
    > **Note**  
    > For faster deployment, backend build utilizes [SWC](https://github.com/swc-project/swc), A Super-fast TS/JS compiler for the web.  
    > If the compilation fails, you can always build with fallback to stock Typescript builder via running command `yarn build:types`  
-4. Run `yarn start` to start your local fastify server.
+7. Run `yarn start` to start your local fastify server.  
+   Alternatively, You can use `pm2 start ecosystem.config.js`  
 
 ## Setting up Accounts Backend
 1. Clone [upstream meiliNG repository](https://github.com/meili-NG/meiliNG)
