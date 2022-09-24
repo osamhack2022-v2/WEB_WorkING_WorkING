@@ -15,6 +15,11 @@ if (keyOption) keyOption += '-i "' + keyFile + '"';
 // TODO: current pm2 deployment logic deploys both frontend and backend on each dir
 const installPath = "/var/workING/backend";
 
+const sshOptions = [
+  process.env.DEPLOY_BYPASS_KEY_CHECK ? "StrictHostKeyChecking=no" : undefined,
+  process.env.DEPLOY_SUPPRESS_SSH_LOG ? "LogLevel=QUIET" : undefined,
+].filter((n) => n !== undefined);
+
 module.exports = {
   apps: [
     {
@@ -45,14 +50,15 @@ module.exports = {
         : "git@github.com:osamhack2022/WEB_WorkING_WorkING.git",
       path: installPath,
       key: keyFile,
-      "pre-deploy-local": `scp -Cr ./.env ${process.env.DEPLOY_USER}@${process.env.DEPLOY_HOST}:${installPath}/current`,
+      "pre-deploy-local": `scp -Cr${
+        sshOptions.length > 0
+          ? " " + sshOptions.map((n) => '-o "' + n + '"').join(" ")
+          : ""
+      } ./.env ${process.env.DEPLOY_USER}@${
+        process.env.DEPLOY_HOST
+      }:${installPath}/current`,
       "post-deploy": `cd backend && yarn && yarn generate && yarn build && pm2 startOrRestart ecosystem.config.js`,
-      ssh_options: [
-        process.env.DEPLOY_BYPASS_KEY_CHECK
-          ? "StrictHostKeyChecking=no"
-          : undefined,
-        process.env.DEPLOY_SUPPRESS_SSH_LOG ? "LogLevel=QUIET" : undefined,
-      ].filter((n) => n !== undefined),
+      ssh_options: sshOptions,
     },
   },
 };
