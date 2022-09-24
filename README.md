@@ -1,6 +1,8 @@
 
 [![Frontend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-ci.yml) 
-[![Backend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml)
+[![Backend CI](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-ci.yml) 
+[![Frontend Deploy](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-deploy.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/fe-deploy.yml) 
+[![Backend Deploy](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-deploy.yml/badge.svg)](https://github.com/osamhack2022/WEB_WorkING_WorkING/actions/workflows/be-deploy.yml) 
 
 # Work ~ING
 군 장병 헬스장 및 운동 관리 시스템  
