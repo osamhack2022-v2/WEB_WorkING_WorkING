@@ -49,9 +49,9 @@ jobs:
       - name: Install dependencies 👨🏻‍💻
         run: yarn
       
-      - name: 👷 Build Typescript
-        run: yarn build:types
-      
       - name: Run linter 👀
         run: yarn lint
+      
+      - name: 👷 Build Typescript
+        run: yarn build:types
 
