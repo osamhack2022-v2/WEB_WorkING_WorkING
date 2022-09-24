@@ -1,6 +1,12 @@
 name: Backend Deploy
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "WEB(BE)/**/*"
+      - ".github/workflows/be-deploy.yml"
   workflow_dispatch:
   release:
     types: [created]

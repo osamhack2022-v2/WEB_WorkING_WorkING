@@ -1,6 +1,12 @@
 name: Frontend Deploy
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "WEB(FE)/**/*"
+      - ".github/workflows/fe-deploy.yml"
   workflow_dispatch:
   release:
     types: [created]
