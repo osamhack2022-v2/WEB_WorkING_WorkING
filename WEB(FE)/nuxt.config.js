@@ -9,6 +9,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
+      // shamelessly steal cdn traffic from @Baw-Appie
+      { rel: 'stylesheet', type: 'text/css', href: '//pretendard.appie.dev/web/static/pretendard.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
