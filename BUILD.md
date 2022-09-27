@@ -33,3 +33,8 @@
 1. Clone [upstream meiliNG repository](https://github.com/meili-NG/meiliNG)
 2. Follow directions on [INSTALL.md](https://github.com/meili-NG/meiliNG/blob/main/INSTALL.md)  
 3. Setup your meiliNG frontend.
+   > **TODO**
+   > Properly implement open-source meiliNG frontend. [Issue](https://github.com/meili-NG/meiliNG/issues/41)  
+   >   
+   > Use proprietary version at the moment
+
