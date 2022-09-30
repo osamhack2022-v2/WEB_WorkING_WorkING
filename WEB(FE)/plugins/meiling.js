@@ -1,6 +1,7 @@
 import crypto from 'crypto-browserify'
 import axios from 'axios'
 import dayjs from 'dayjs'
+import jwtDecode from 'jwt-decode'
 
 // meiliNG oAuth2 integration code.
 // proudly taken from @Stella-IT
@@ -16,6 +17,9 @@ export default {
     return [
       'openid'
     ]
+  },
+  getUserData () {
+    return jwtDecode(localStorage.getItem('oAuth2.idToken'))
   },
   getSignInURI ({ selectAccount = false, queryString = {}, origin }) {
     const clientId = this.getClientId()
@@ -43,6 +47,7 @@ export default {
   signOut () {
     localStorage.removeItem('oAuth2.accessToken')
     localStorage.removeItem('oAuth2.refreshToken')
+    localStorage.removeItem('oAuth2.idToken')
   },
   signinCleanup () {
     localStorage.removeItem('oAuth2.codeVerifier')
@@ -94,7 +99,6 @@ export default {
 
       return false
     } catch (e) {
-      console.error(e)
       alert('meiliNG login error:\n' + e)
 
       throw e

@@ -18,6 +18,9 @@ const methods = {
   },
   async getAccessToken () {
     return await Meiling.getAccessToken()
+  },
+  getUserData () {
+    return Meiling.getUserData()
   }
 
 }
