@@ -4,11 +4,12 @@ div
     nav.flex.justify-between.items-center
       nuxt-link(to="/")
         p.text-2xl {{ getProductName() }}
-      ul.flex.justify-end.gap-6
+      ul.flex.justify-end.gap-6(v-if="userData === null")
         li
-          nuxt-link(to="/page1") 1
+          nuxt-link(to="/auth/signin") 로그인
+      ul.flex.justify-end.gap-6(v-else)
         li
-          nuxt-link(to="/page2") 2
+          nuxt-link(to="/auth/signout") {{ userData.nickname }}
 
   nuxt
 
@@ -17,8 +18,8 @@ div
       div
         p.font-light &copy; {{ getProductName() }}
         p.text-xs.mt-1.text-gray-500
-        span.font-bold.mr-1 Build:
-        | {{ commit }}
+          span.font-bold.mr-1 Build:
+          | {{ commit }}
 
         div.text-sm.mt-2(class="md:mt-0")
           nuxt-link.text-blue-500.mr-2(to="/privacy") 개인정보 처리방침
@@ -29,10 +30,14 @@ div
 export default {
   data () {
     return {
-      commit: process.env.NUXT_ENV_CURRENT_GIT_SHA || 'dev'
+      commit: process.env.NUXT_ENV_CURRENT_GIT_SHA || 'dev',
+      userData: null
     }
   },
-  mounted () {},
+  mounted () {
+    this.userData = this.getUserData()
+    console.log('userData', this.userData)
+  },
   methods: {}
 }
 </script>
@@ -40,5 +45,10 @@ export default {
 <style lang="postcss">
 html {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.btn {
+  @apply transition px-4 py-2 text-white bg-black rounded-lg;
+
 }
 </style>

@@ -11,6 +11,7 @@ export default {
     link: [
       // shamelessly steal cdn traffic from @Baw-Appie
       { rel: 'stylesheet', type: 'text/css', href: '//pretendard.appie.dev/web/static/pretendard.css' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
