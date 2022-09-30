@@ -41,4 +41,9 @@ export default {
 html {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
+
+.btn {
+  @apply transition px-4 py-2 text-white bg-black rounded-lg;
+
+}
 </style>
