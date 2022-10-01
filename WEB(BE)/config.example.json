@@ -1,0 +1,16 @@
+{
+    "meiling": {
+      "hostname": "https://meiling.dev.alex4386.me"
+    },
+    "permissions": {
+      "required": [
+        "openid"
+      ]
+    },
+    "admin": {
+      "token": []
+    },
+    "sentry": {
+      "dsn": ""
+    }
+}
