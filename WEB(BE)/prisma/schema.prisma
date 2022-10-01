@@ -15,3 +15,21 @@ model User {
   isAdmin            Boolean        @default(false)
   isBanned           Boolean        @default(false)
 }
+
+model Workout {
+  id                 String         @id @unique @default(uuid())
+
+  name               String
+}
+
+enum GoalType {
+  INSPECTION
+  PE_EXAM
+}
+
+model Goal {
+  id                 String         @id @unique @default(uuid())
+  type               GoalType?
+
+  name               String
+}
