@@ -25,8 +25,7 @@ module.exports = {
     {
       name: "working-be",
       cwd: "./WEB(BE)/",
-      script: "yarn",
-      args: ["start"],
+      script: "./dist/index.js",
       env: {
         // You should configure it here.
         NODE_ENV: "production",
