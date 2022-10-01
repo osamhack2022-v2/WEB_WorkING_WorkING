@@ -8,5 +8,10 @@ generator client {
 }
 
 model User {
-    sub  String  @id @unique
+  sub                String         @id
+  id_token           Json?
+  firstJoin          DateTime       @default(now())
+  lastAuthorized     DateTime       @default(now())
+  isAdmin            Boolean        @default(false)
+  isBanned           Boolean        @default(false)
 }

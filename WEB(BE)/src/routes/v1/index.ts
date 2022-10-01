@@ -6,6 +6,7 @@ import * as Meiling from "../../common/meiling";
 import * as User from "../../common/user";
 import adminHandler from "./admin";
 import { sentryErrorHandler } from "../../common/sentry";
+import { config } from "../..";
 
 export interface FastifyRequestWithUser extends FastifyRequest {
   user: MeilingV1OAuthOpenIDData;

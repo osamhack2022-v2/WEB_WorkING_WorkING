@@ -4,10 +4,18 @@ import * as Banner from "./common/banner";
 import { registerRootEndpoints } from "./routes";
 import fastifyCors from "@fastify/cors";
 import dotenv from "dotenv";
+import fs from "fs";
+import { Config } from "./common/config";
 
 dotenv.config();
 
 const env = process.env.NODE_ENV || "development";
+export const packageJson = JSON.parse(
+  fs.readFileSync("package.json", { encoding: "utf-8" })
+);
+export const config = JSON.parse(
+  fs.readFileSync("config.json", { encoding: "utf-8" })
+) as Config;
 
 export const isDevelopment = env === "development";
 export const prisma = new PrismaClient();

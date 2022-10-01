@@ -24,6 +24,8 @@ export class APIError extends Error {
   public type: APIErrorType;
   public description?: string;
 
+  _isAPI?: true;
+
   constructor(type: APIErrorType, description?: string) {
     const internalDesc = description ? description : type;
 
