@@ -19,7 +19,11 @@ export default {
     ]
   },
   getUserData () {
-    return jwtDecode(localStorage.getItem('oAuth2.idToken'))
+    try {
+      return jwtDecode(localStorage.getItem('oAuth2.idToken'))
+    } catch (e) {
+      return undefined
+    }
   },
   getSignInURI ({ selectAccount = false, queryString = {}, origin }) {
     const clientId = this.getClientId()

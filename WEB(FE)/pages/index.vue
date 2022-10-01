@@ -7,12 +7,12 @@
           .my-2 운동,
           .my-2 이제는
           .font-black.my-2
-            span.text-transparent.bg-clip-text.bg-gradient-to-br.from-green-400.to-blue-400 체계적으로.
+            span.primary-gradient-text 체계적으로.
         .flex.flex-col.justify-end
           .grow
           p workING 이 여러분의 운동을 목표에 맞춰 코칭해 드립니다.
       div.mt-8
-        nuxt-link.btn.text-xl.font-bold.rounded-lg.bg-gradient-to-br.from-green-400.to-blue-400(to="/dash")
+        nuxt-link.btn.text-xl.font-bold.rounded-lg(to="/dash")
           | 시작하기
 </template>
 

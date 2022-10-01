@@ -5,6 +5,8 @@ div
       nuxt-link(to="/")
         p.text-2xl {{ getProductName() }}
       ul.flex.justify-end.gap-6(v-if="userData === null")
+        |
+      ul.flex.justify-end.gap-6(v-else-if="userData === undefined")
         li
           nuxt-link(to="/auth/signin") 로그인
       ul.flex.justify-end.gap-6(v-else)
@@ -49,6 +51,18 @@ html {
 
 .btn {
   @apply transition px-4 py-2 text-white bg-black rounded-lg;
-
 }
+
+.clip-text-to-bg {
+  @apply text-transparent bg-clip-text
+}
+
+.primary-gradient-bg {
+  @apply bg-gradient-to-br from-green-400 to-blue-400;
+}
+
+.primary-gradient-text {
+  @apply primary-gradient-bg clip-text-to-bg;
+}
+
 </style>
